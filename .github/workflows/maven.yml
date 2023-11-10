@@ -48,10 +48,9 @@ jobs:
         uses: actions/setup-java@v2
         with:
           distribution: 'adopt'
-          java-version: '8'
-          
-      - name: Change to project directory
-        run: cd task4_rest_service
+          java-version: '8'  
         
       - name: Test with Maven
-        run: mvn test
+        run: |
+          cd task4_rest_service
+          mvn clean test
