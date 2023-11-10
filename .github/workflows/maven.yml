@@ -49,6 +49,9 @@ jobs:
         with:
           distribution: 'adopt'
           java-version: '8'
-
+          
+      - name: Change to project directory
+        run: cd task4/task4_rest_service
+        
       - name: Test with Maven
         run: mvn test
